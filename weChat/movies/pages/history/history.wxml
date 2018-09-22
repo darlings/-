@@ -1,0 +1,8 @@
+<!--pages/history/history.wxml-->
+<import src="/common/template/list" />
+<template is="list" data="{{movies, isLoading, isNodata}}" wx:if="{{isHistory}}" />
+<view class='no-history' wx:else>
+  <image src='/assets/imgs/no-history.png' mode='widthFix'></image>
+  <text>暂无历史记录</text>
+</view>
+<text class='btn-clear-history' bindtap="handelClear" wx:if="{{isHistory}}">清除历史缓存</text>

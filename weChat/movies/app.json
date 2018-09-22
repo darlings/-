@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/user/user",
+    "pages/detail/detail",
+    "pages/rating/rating",
+    "pages/celebrity/celebrity",
+    "pages/search/search",
+    "pages/history/history"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#8dcbb9",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "电影预告",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#8dcbb9",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/imgs/index.png",
+        "selectedIconPath": "/assets/imgs/index-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "/assets/imgs/search.png",
+        "selectedIconPath": "/assets/imgs/search-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/assets/imgs/user.png",
+        "selectedIconPath": "/assets/imgs/user-active.png"
+      }
+    ]
+  }
+}

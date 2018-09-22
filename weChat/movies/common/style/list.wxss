@@ -1,0 +1,82 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.scroll-view {
+  height: 100%;
+}
+.list-moive {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 40rpx 20rpx;
+  overflow: hidden;
+}
+.moive-item {
+  width: 47%;
+  margin: 0 12rpx;
+}
+.moive-item image {
+  width: 100%;
+  height: 480rpx;
+  font-size: 0;
+}
+.moive-item .m-name {
+  display: block;
+  width: 100%;
+  font-size: 24rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.moive-item .m-rate {
+  font-size: 24rpx;
+  color: #f00;
+  margin-left: 20rpx;
+}
+.moive-item .m-type {
+  font-size: 24rpx;
+  color: #666;
+}
+.moive-item image.stars {
+  width: 24rpx;
+  height: 24rpx;
+  font-size: 0;
+  vertical-align: middle;
+  margin-left: 5rpx;
+}
+.loading {
+  padding: 20rpx;
+  text-align: center;
+}
+.loading image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.no-data {
+  position: relative;
+  color: #999;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 30rpx;
+  background-color: #f1f1f1;
+  z-index: 1;
+}
+.no-data > text {
+  position: relative;
+  display: inline-block;
+  padding: 0 20rpx;
+  background-color: #f1f1f1;
+  z-index: 2;
+}
+.no-data::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 1px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ddd;
+}

@@ -1,0 +1,68 @@
+<template name="list">
+  <scroll-view 
+  class='scroll-view' 
+  scroll-y="true" 
+  lower-threshold="300" 
+  bindscrolltolower="scrollHandler">
+    <view class='list-moive' wx:for="{{movies}}" wx:for-item="movieData" wx:key="index">
+      <view class='moive-item' wx:for="{{movieData}}" wx:key="{{item.id}}" bindtap='goDetail' data-id='{{item.id}}'>
+        <image src='{{item.images.large}}' mode='aspectFill' lazy-load="true"></image>
+        <text class='m-name'>{{item.title}}</text>
+        <view wx:if="{{item.rating.average<1}}">
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+        <view wx:elif="{{item.rating.average<3}}">
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+        <view wx:elif="{{item.rating.average<5}}">
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+        <view wx:elif="{{item.rating.average<7}}">
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+        <view wx:elif="{{item.rating.average<10}}">
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+        <view wx:else>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <image src='/assets/imgs/stars-active.png' class="stars"></image>
+          <text class='m-rate'>{{item.rating.average}}分</text>
+        </view>
+      </view>
+    </view>
+    <view class='no-data' wx:if="{{isNodata}}">
+      <text>我是有底线的</text>
+    </view>
+  </scroll-view>
+  <view class='loading' wx:if="{{isLoading}}">
+    <image src='/assets/loading/loading-bars.svg'></image>
+  </view>
+</template>

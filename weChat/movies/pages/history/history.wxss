@@ -1,0 +1,24 @@
+/* pages/history/history.wxss */
+@import "/common/style/list.wxss";
+.no-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+}
+.no-history > image {
+  width: 200rpx;
+}
+.no-history > text {
+  font-size: 30rpx;
+  color: #999;
+}
+.btn-clear-history {
+  display: block;
+  color: #8dcbb9;
+  font-size: 30rpx;
+  padding: 30rpx;
+  text-align: center;
+}

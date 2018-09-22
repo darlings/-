@@ -1,0 +1,23 @@
+<!--pages/user/user.wxml-->
+<view class='body user'>
+  <view class='user-info'>
+    <view class='u-header-img'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName" class='u-name'></open-data>
+    <!-- <image src='{{userAvatar}}' class='u-header-img'></image>
+    <text class='u-name'>{{userNickname}}</text> -->
+  </view>
+  <view class='user-handler'>
+    <view class='u-item'>
+      <image src='/assets/imgs/u-share.png' class='u-icon'></image>
+      <button open-type='share' class='btn-share'>分享</button>
+      <image src='/assets/imgs/more.png' class='u-more'></image>
+    </view>
+    <view class='u-item' bindtap='watchHistory'>
+      <image src='/assets/imgs/u-hostory.png' class='u-icon'></image>
+      <text>观看历史</text>
+      <image src='/assets/imgs/more.png' class='u-more'></image>
+    </view>
+  </view>
+</view>

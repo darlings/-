@@ -1,0 +1,54 @@
+<!--pages/index/index.wxml-->
+<!-- <import src="/common/template/list" />
+<template is="list" data="{{movies, isLoading}}" /> -->
+<!-- 影院热映 -->
+<view class='the-movie-list'>
+  <view class='movie-list-head' bindtap='goList' data-type='in_theaters'>
+    <text>影院热映</text>
+    <image src='/assets/imgs/more.png' class='m-more'></image>
+  </view>
+  <scroll-view scroll-x="true" class='movie-scroll'>
+    <block wx:for="{{in_theaters}}" wx:key="{{item.id}}">
+      <view class='single-movie' bindtap='goDetail' data-id='{{item.id}}'>
+        <image src='{{item.images.large}}'></image>
+        <text class='m-name'>{{item.title}}</text>
+        <text class='m-rating allstar{{item.rating.average | 0}}'>{{item.rating.average}}分</text>
+        <text class='m-wish'>{{item.wish_count}}人想看</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 即将上映 -->
+<view class='the-movie-list'>
+  <view class='movie-list-head' bindtap='goList' data-type='coming_soon'>
+    <text>即将上映</text>
+    <image src='/assets/imgs/more.png' class='m-more'></image>
+  </view>
+  <scroll-view scroll-x="true" class='movie-scroll'>
+    <block wx:for="{{coming_soon}}" wx:key="{{item.id}}">
+      <view class='single-movie' bindtap='goDetail' data-id='{{item.id}}'>
+        <image src='{{item.images.large}}'></image>
+        <text class='m-name'>{{item.title}}</text>
+        <text class='m-rating allstar{{item.rating.average | 0}}'>{{item.rating.average}}分</text>
+        <text class='m-wish'>{{item.wish_count}}人想看</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 精选榜单Top250 -->
+<view class='the-movie-list'>
+  <view class='movie-list-head text-align-c'>
+    <text>精选榜单</text>
+  </view>
+  <view class="top250-gradient" bindtap='goList' data-type='top250'>
+    <view class="selected-content">
+      <text class="name">豆瓣TOP250</text>
+      <text class="desc">8分以上好电影</text>
+      <view class="selected-poster">
+        <image class="selected-poster-left"  src='{{top250[0].images.large}}'></image>
+        <image class="selected-poster-center"  src='{{top250[1].images.large}}'></image>
+        <image class="selected-poster-right"  src='{{top250[2].images.large}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
