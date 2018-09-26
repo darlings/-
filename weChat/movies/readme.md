@@ -4,33 +4,33 @@
 
 * 首页
 
-![](D:\djm\git\weChat\movies\img\shouye.PNG)
+![](./img/shouye.PNG)
 
 * 详情页
 
-![](D:\djm\git\weChat\movies\img\detail.PNG)
+![](./img/detail.PNG)
 
 * 电影列表
 
-![](D:\djm\git\weChat\movies\img\movelist.PNG)
+![](./img/movelist.PNG)
 
 * 个人中心
 
-![](D:\djm\git\weChat\movies\img\person.PNG)
+![](./img/person.PNG)
 
 * 评分
 
-![](D:\djm\git\weChat\movies\img\pingfen.PNG)
+![](./img/pingfen.PNG)
 
 * 搜索页
 
-![](D:\djm\git\weChat\movies\img\search.PNG)
+![](./img/search.PNG)
 
 * 电影列表
 
-![](D:\djm\git\weChat\movies\img\movelist.PNG)
+![](./img/movelist.PNG)
 
 * 评分
 
-![](D:\djm\git\weChat\movies\img\pingfen2.PNG)
+![](./img/pingfen2.PNG)
 
